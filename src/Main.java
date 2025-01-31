@@ -7,7 +7,7 @@ public class Main {
             double a = scanner.nextDouble();
             double b = scanner.nextDouble();
             double c = scanner.nextDouble();
-            QuadraticExecutor executor = new QuadraticExecutor(new QuadraticService());
+            QuadraticExecutor executor = new QuadraticExecutor(new QuadraticServiceImpl());
             Quadratic q1 = new Quadratic(a, b, c);
             executor.execute(q1);
         }
