@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try(Scanner scanner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("aх2 + bx + c = 0 \nEnter the coefficients of the quadratic equation: ");
             double a = scanner.nextDouble();
             double b = scanner.nextDouble();

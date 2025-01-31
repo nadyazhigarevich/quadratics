@@ -11,7 +11,7 @@ public class QuadraticExecutor {
             this.executeBranches(quadratic);
             this.executeRoots(quadratic);
             this.executeVertex(quadratic);
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
     }

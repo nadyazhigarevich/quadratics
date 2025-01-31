@@ -4,7 +4,7 @@ public class QuadraticService {
     }
 
     public String getBranches(Quadratic quadratic) {
-        return quadratic.getA() > 0 ? "vverh" : "vniz";
+        return quadratic.getA() > 0 ? BranchesDirections.UP.name() : BranchesDirections.DOWN.name();
     }
 
     public Double[] getRoots(Quadratic quadratic) {
