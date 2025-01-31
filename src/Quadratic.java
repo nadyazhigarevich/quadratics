@@ -1,10 +1,10 @@
 public class Quadratic {
-    private int a;
-    private int b;
-    private int c;
+    private double a;
+    private double b;
+    private double c;
 
     public Quadratic(int a, int b, int c) {
-        this.a = a;
+        setA(a);
         this.b = b;
         this.c = c;
     }
@@ -13,20 +13,24 @@ public class Quadratic {
 
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setA(double a) {
+        if (a == 0) {
+            throw new RuntimeException("Not a quadratic equation");
+        } else {
+            this.a = a;
+        }
     }
 
     public void setB(int b) {
