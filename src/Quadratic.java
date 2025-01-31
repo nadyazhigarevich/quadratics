@@ -3,7 +3,7 @@ public class Quadratic {
     private double b;
     private double c;
 
-    public Quadratic(int a, int b, int c) {
+    public Quadratic(double a, double b, double c) {
         setA(a);
         this.b = b;
         this.c = c;

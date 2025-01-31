@@ -7,12 +7,16 @@ public class QuadraticService {
         return quadratic.getA() > 0 ? "vverh" : "vniz";
     }
 
-    public double getRoots(Quadratic quadratic) {
-        if (calculateDiscriminant(quadratic) > 0) {
-            return (-quadratic.getB() + Math.sqrt(calculateDiscriminant(quadratic))) / (2 * quadratic.getA());
+    public Double[] getRoots(Quadratic quadratic) {
+        double discriminant = calculateDiscriminant(quadratic);
+        if (discriminant > 0) {
+            double root1 = (-quadratic.getB() + Math.sqrt(discriminant)) / (2 * quadratic.getA());
+            double root2 = (-quadratic.getB() - Math.sqrt(discriminant)) / (2 * quadratic.getA());
+            return new Double[]{root1, root2};
         }
-        if (calculateDiscriminant(quadratic) == 0) {
-            return -quadratic.getB() / (2 * quadratic.getA());
+        if (discriminant == 0) {
+            double root = -quadratic.getB() / (2 * quadratic.getA());
+            return new Double[]{root, null};
         } else {
             throw new RuntimeException("No roots");
         }
