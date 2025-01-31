@@ -25,10 +25,10 @@ public class QuadraticExecutor {
     }
 
     private void executeRoots(Quadratic quadratic) {
-        System.out.println("Roots: " + quadraticService.getRoots(quadratic)[0] + "; " + quadraticService.getRoots(quadratic)[1]);
+        System.out.println("Roots: " + quadraticService.getRoots(quadratic).getRoot1() + "; " + quadraticService.getRoots(quadratic).getRoot2());
     }
 
     private void executeVertex(Quadratic quadratic) {
-        System.out.println("Vertex: (" + quadraticService.getVertex(quadratic)[0] + ", " + quadraticService.getVertex(quadratic)[1] + ")");
+        System.out.println("Vertex: (" + quadraticService.getVertex(quadratic).getX() + ", " + quadraticService.getVertex(quadratic).getY() + ")");
     }
 }
